@@ -14,6 +14,9 @@ def draw_tri(tX1, tY1, tX2, tY2, tX3, tY3, tCol, tWin):
     tri.setOutline(tCol)
     tri.draw(tWin)
 
+def draw_cone(tX1, tY1, tX2, tY2, tX3, tY3, tCol, tWin):
+    draw_tri(tX1, tY1, tX2, tY2, tX3, tY3, tCol, tWin)
+
 icRad = 50
 winFactor = 10
 winX = icRad * winFactor
@@ -23,7 +26,7 @@ icWin = GraphWin("Have a cone!", winX, winY)
 icWin.setCoords(0, 0, winX, winY)
 
 draw_circ(winX / 2, winY / 2 + icRad, icRad, "pink", icWin)
-draw_tri(winX / 2 - icRad - 2, winY / 2 + icRad * .75,
+draw_cone(winX / 2 - icRad - 2, winY / 2 + icRad * .75,
          winX / 2 + icRad + 2, winY / 2 + icRad * .75,
          winX / 2 , winY / 2 - icRad * 2,
          "orange", icWin)
