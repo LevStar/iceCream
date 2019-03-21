@@ -24,9 +24,9 @@ def draw_waffle(wX, wY, wSz, wCol, wWin):
     waffle.draw(wWin)
 
 def draw_waffles(wX, wY, wSz, wCol, wWin):
-    for j in range(5):
-        for i in range(8):
-            draw_waffle(wX + i * wSz * 2, wY - j * wSz * 3, wSz, wCol, wWin)
+    for j in range(6):
+        for i in range(9 - j * 2):
+            draw_waffle(wX + i * wSz * 2 + wSz * j * 2, wY - j * wSz * 5, wSz, wCol, wWin)
 
 icRad = 100
 winFactor = 10
