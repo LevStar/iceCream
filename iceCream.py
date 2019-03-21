@@ -18,8 +18,8 @@ def draw_cone(tX1, tY1, tX2, tY2, tX3, tY3, tCol, tWin):
     draw_tri(tX1, tY1, tX2, tY2, tX3, tY3, tCol, tWin)
 
 def draw_waffle(wX, wY, wSz, wCol, wWin):
-    waffle = Polygon(Point(wX - wSz, wY), Point(wX, wY + wSz * 1.5),
-                     Point(wX + wSz, wY), Point(wX, wY - wSz * 1.5))
+    waffle = Polygon(Point(wX - wSz * .75, wY), Point(wX, wY + wSz * 1.5),
+                     Point(wX + wSz * .75, wY), Point(wX, wY - wSz * 1.5))
     waffle.setOutline(wCol)
     waffle.draw(wWin)
 
@@ -38,7 +38,7 @@ draw_cone(winX / 2 - icRad - 2, winY / 2 + icRad * .75,
          "orange", icWin)
 draw_waffle((winX / 2 - icRad - 2) + icRad / 5,
             (winY / 2 + icRad * .75) - icRad / 5,
-            5, "brown", icWin)
+            icRad/10, "brown", icWin)
             
          
          
