@@ -14,7 +14,7 @@ winX = icRad * winFactor
 winY = icRad * winFactor
 
 icWin = GraphWin("Have a cone!", winX, winY)
-icWin.setFill(0, 0, winX, winY)
+icWin.setCoords(0, 0, winX, winY)
 
 draw_circ(winX / 2, winY / 2 + icRad * 2, icRad, "pink", icWin)
 
