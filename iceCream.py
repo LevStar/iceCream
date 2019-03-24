@@ -8,13 +8,15 @@ def draw_circ(cX, cY, cRad, cCol, cWin):
     circ.setOutline(cCol)
     circ.draw(cWin)
 
-def draw_tri(tX1, tY1, tX2, tY2, tX3, tY3, tCol, tWin):
-    tri = Polygon(Point(tX1, tY1), Point(tX2, tY2), Point(tX3, tY3))
+def draw_tri(twX, twY, tSz, tCol, tWin):
+    tri = Polygon(Point(twX / 2 - tSz - 2, twY / 2 + tSz * .75),
+                  Point(twX / 2 - tSz + 2, twY / 2 + tSz * .75),
+                  Point(twX / 2,  twY / 2 - tSz * 2))
     tri.setFill(tCol)
     tri.setOutline(tCol)
     tri.draw(tWin)
 
-def draw_cone(tX1, tY1, tX2, tY2, tX3, tY3, tCol, tWin):
+def draw_cone(twX, tX1, tY1, tX2, tY2, tX3, tY3, tCol, tWin):
     draw_tri(tX1, tY1, tX2, tY2, tX3, tY3, tCol, tWin)
 
 def draw_waffle(wX, wY, wSz, wCol, wWin):
