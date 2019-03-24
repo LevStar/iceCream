@@ -10,7 +10,7 @@ def draw_circ(cX, cY, cRad, cCol, cWin):
 
 def draw_tri(twX, twY, tSz, tCol, tWin):
     tri = Polygon(Point(twX / 2 - tSz - 2, twY / 2 + tSz * .75),
-                  Point(twX / 2 - tSz + 2, twY / 2 + tSz * .75),
+                  Point(twX / 2 + tSz - 2, twY / 2 + tSz * .75),
                   Point(twX / 2,  twY / 2 - tSz * 2))
     tri.setFill(tCol)
     tri.setOutline(tCol)
@@ -39,10 +39,7 @@ icWin = GraphWin("Have a cone!", winX, winY)
 icWin.setCoords(0, 0, winX, winY)
 
 draw_circ(winX / 2, winY / 2 + icRad, icRad, "pink", icWin)
-draw_cone(winX / 2 - icRad - 2, winY / 2 + icRad * .75,
-         winX / 2 + icRad + 2, winY / 2 + icRad * .75,
-         winX / 2 , winY / 2 - icRad * 2,
-         "orange", icWin)
+draw_cone(winX, winY, icRad, "orange", icWin)
 draw_waffles((winX / 2 - icRad - 2) + icRad / 5,
             (winY / 2 + icRad * .75) - icRad / 5,
             icRad/10, "brown", icWin)
