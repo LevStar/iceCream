@@ -16,9 +16,6 @@ def draw_tri(twX, twY, tSz, tCol, tWin):
     tri.setOutline(tCol)
     tri.draw(tWin)
 
-def draw_cone(twX, twY, tSz, tCol, tWin):
-    draw_tri(twX, twY, tSz, tCol, tWin)
-
 def draw_waffle(wX, wY, wSz, wCol, wWin):
     waffle = Polygon(Point(wX - wSz * .75, wY), Point(wX, wY + wSz * 1.5),
                      Point(wX + wSz * .75, wY), Point(wX, wY - wSz * 1.5))
@@ -30,6 +27,12 @@ def draw_waffles(wX, wY, wSz, wCol, wWin):
         for i in range(9 - j * 2):
             draw_waffle(wX + i * wSz * 2 + wSz * j * 2, wY - j * wSz * 5, wSz, wCol, wWin)
 
+def draw_cone(twX, twY, tSz, tCol, tWin):
+    draw_tri(twX, twY, tSz, tCol, tWin)
+    draw_waffles((twX / 2 - tSz - 2) + tSz / 5,
+                 (twY / 2 + tSz * .75) - tSz / 5,
+                 tSz / 10, "brown", tWin)
+                 
 icRad = 100
 winFactor = 10
 winX = icRad * winFactor
@@ -40,9 +43,6 @@ icWin.setCoords(0, 0, winX, winY)
 
 draw_circ(winX / 2, winY / 2 + icRad, icRad, "pink", icWin)
 draw_cone(winX, winY, icRad, "orange", icWin)
-draw_waffles((winX / 2 - icRad - 2) + icRad / 5,
-            (winY / 2 + icRad * .75) - icRad / 5,
-            icRad/10, "brown", icWin)
             
          
          
