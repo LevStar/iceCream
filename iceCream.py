@@ -43,6 +43,6 @@ icWin.setCoords(0, 0, winX, winY)
 
 draw_circ(winX / 2, winY / 2 + icRad, icRad, "pink", icWin)
 draw_cone(winX, winY, icRad, "orange", icWin)
-            
-         
-         
+
+icWin.getMouse()
+icWin.close()
