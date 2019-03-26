@@ -48,4 +48,3 @@ draw_cone(winX, winY, icRad, "orange", icWin)
 icWin.getMouse()
 icWin.close()
 
-# This line represents a fake change.
