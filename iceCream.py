@@ -45,3 +45,5 @@ draw_circ(winX / 2, winY / 2 + icRad, icRad, "pink", icWin)
 draw_cone(winX, winY, icRad, "orange", icWin)
 
 # Close window on click anywhere
+icWin.getMouse()
+icWin.close()
